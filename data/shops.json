@@ -1,0 +1,582 @@
+[
+  {
+    "id": "kicks",
+    "name": "Kicks Corner",
+    "username": "kickscorner.sample",
+    "cats": [
+      "Shoes"
+    ],
+    "verified": true,
+    "rating": 4.8,
+    "reviews": 212,
+    "replyMins": 10,
+    "areas": [
+      "CBD",
+      "Westlands",
+      "Kilimani"
+    ],
+    "howToOrder": "DM a photo of the pair you want with your size. Pay on delivery within Nairobi; same-day if you order before 2 pm.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "White low-top sneakers",
+        "price": 3200,
+        "tags": "sneakers shoes white trainers casual",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Black running shoes",
+        "price": 4500,
+        "tags": "sneakers shoes black running trainers sports",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Canvas high-tops",
+        "price": 2400,
+        "tags": "sneakers shoes canvas high top",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Chunky dad sneakers",
+        "price": 5800,
+        "tags": "sneakers shoes chunky white",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Leather loafers",
+        "price": 6500,
+        "tags": "shoes loafers leather formal men",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "mtumba",
+    "name": "Mtumba Gold Thrift",
+    "username": "mtumbagold.sample",
+    "cats": [
+      "Thrift",
+      "Clothes"
+    ],
+    "verified": true,
+    "rating": 4.6,
+    "reviews": 540,
+    "replyMins": 30,
+    "areas": [
+      "Thika Rd",
+      "CBD"
+    ],
+    "howToOrder": "New bales drop every Tuesday and Friday on stories. Reserve by DM, pay by M-Pesa, pick up in CBD or get it delivered.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Vintage denim jacket",
+        "price": 1500,
+        "tags": "jacket denim vintage thrift jeans",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Mom jeans",
+        "price": 1200,
+        "tags": "jeans denim trousers women thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Oversized hoodie",
+        "price": 900,
+        "tags": "hoodie sweater oversized thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Floral midi dress",
+        "price": 800,
+        "tags": "dress floral midi women thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Graphic tees",
+        "price": 350,
+        "tags": "tshirt tee top graphic thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Corduroy trousers",
+        "price": 1100,
+        "tags": "trousers pants corduroy thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "sole",
+    "name": "Sole Avenue",
+    "username": "soleavenue.sample",
+    "cats": [
+      "Shoes"
+    ],
+    "verified": false,
+    "rating": 4.5,
+    "reviews": 98,
+    "replyMins": 60,
+    "areas": [
+      "Kilimani",
+      "Westlands",
+      "Karen"
+    ],
+    "howToOrder": "Order on WhatsApp. Sizes 36 to 42. Exchanges within 3 days if the size is wrong.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Block heels",
+        "price": 2800,
+        "tags": "heels shoes women block",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Strappy sandals",
+        "price": 1800,
+        "tags": "sandals shoes women summer",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Ankle boots",
+        "price": 4500,
+        "tags": "boots shoes women ankle",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Ballet flats",
+        "price": 2000,
+        "tags": "flats shoes women ballet",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "kitenge",
+    "name": "Kitenge & Co",
+    "username": "kitengeandco.sample",
+    "cats": [
+      "Clothes"
+    ],
+    "verified": true,
+    "rating": 4.9,
+    "reviews": 320,
+    "replyMins": 45,
+    "areas": [
+      "All areas"
+    ],
+    "howToOrder": "Ready-made and custom fits. Send your measurements by DM; custom pieces take 5 days. Countrywide delivery by courier.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Kitenge wrap dress",
+        "price": 3800,
+        "tags": "dress kitenge ankara african print women",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Ankara shirt",
+        "price": 2500,
+        "tags": "shirt ankara kitenge african print men",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Two-piece set",
+        "price": 5500,
+        "tags": "set two piece kitenge women",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Head wrap",
+        "price": 1500,
+        "tags": "headwrap accessories kitenge",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "baglab",
+    "name": "Bag Lab",
+    "username": "baglab.sample",
+    "cats": [
+      "Bags"
+    ],
+    "verified": true,
+    "rating": 4.7,
+    "reviews": 150,
+    "replyMins": 15,
+    "areas": [
+      "CBD",
+      "Westlands",
+      "Thika Rd"
+    ],
+    "howToOrder": "All bags in stock are on the grid. DM to order; free delivery in CBD and Westlands on orders over KES 3,000.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Leather tote",
+        "price": 5500,
+        "tags": "bag tote leather handbag women work",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Mini crossbody",
+        "price": 1800,
+        "tags": "bag crossbody sling mini",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Laptop backpack",
+        "price": 3500,
+        "tags": "bag backpack laptop school",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Woven beach bag",
+        "price": 1200,
+        "tags": "bag tote woven beach",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Evening clutch",
+        "price": 2200,
+        "tags": "bag clutch evening",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "denim",
+    "name": "Denim Drop",
+    "username": "denimdrop.sample",
+    "cats": [
+      "Clothes"
+    ],
+    "verified": false,
+    "rating": 4.2,
+    "reviews": 61,
+    "replyMins": 120,
+    "areas": [
+      "CBD",
+      "Kilimani"
+    ],
+    "howToOrder": "Comment \"size\" on any post and they DM you. Pay on delivery.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Wide-leg jeans",
+        "price": 2800,
+        "tags": "jeans denim trousers wide",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Baggy jeans",
+        "price": 3200,
+        "tags": "jeans denim trousers baggy men",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Denim skirt",
+        "price": 1800,
+        "tags": "skirt denim women",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Cargo pants",
+        "price": 2500,
+        "tags": "trousers pants cargo",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "steps",
+    "name": "Little Steps",
+    "username": "littlesteps.sample",
+    "cats": [
+      "Kids",
+      "Shoes",
+      "Clothes"
+    ],
+    "verified": true,
+    "rating": 4.8,
+    "reviews": 88,
+    "replyMins": 20,
+    "areas": [
+      "Karen",
+      "Kilimani",
+      "Westlands"
+    ],
+    "howToOrder": "Send your child's age or foot length in cm. Delivery in 24 hours.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Kids sneakers",
+        "price": 1900,
+        "tags": "kids children sneakers shoes",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "School shoes",
+        "price": 2300,
+        "tags": "kids children school shoes black",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Baby onesies (3-pack)",
+        "price": 600,
+        "tags": "kids baby clothes onesie",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Kids hoodies",
+        "price": 1200,
+        "tags": "kids children hoodie clothes",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "tkicks",
+    "name": "Thrifted Kicks",
+    "username": "thriftedkicks.sample",
+    "cats": [
+      "Thrift",
+      "Shoes"
+    ],
+    "verified": true,
+    "rating": 4.4,
+    "reviews": 190,
+    "replyMins": 25,
+    "areas": [
+      "Thika Rd",
+      "CBD"
+    ],
+    "howToOrder": "Every pair is cleaned and photographed on its own. Sizes are in the caption. Reserve by DM for 24 hours.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Pre-loved basketball sneakers",
+        "price": 2500,
+        "tags": "sneakers shoes thrift basketball high top",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Pre-loved white trainers",
+        "price": 1800,
+        "tags": "sneakers shoes white trainers thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Suede boots",
+        "price": 3000,
+        "tags": "boots shoes suede thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Canvas sneakers",
+        "price": 800,
+        "tags": "sneakers shoes canvas thrift",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "rack",
+    "name": "Gentleman's Rack",
+    "username": "gentsrack.sample",
+    "cats": [
+      "Clothes",
+      "Shoes"
+    ],
+    "verified": false,
+    "rating": 4.6,
+    "reviews": 75,
+    "replyMins": 60,
+    "areas": [
+      "Westlands",
+      "Karen",
+      "Kilimani"
+    ],
+    "howToOrder": "Book a fitting by DM or order straight from the post. Free hemming on trousers.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Linen shirt",
+        "price": 2500,
+        "tags": "shirt linen men",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Tailored chinos",
+        "price": 3200,
+        "tags": "trousers chinos men pants",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Slim blazer",
+        "price": 8000,
+        "tags": "blazer jacket suit men formal",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Leather brogues",
+        "price": 6000,
+        "tags": "shoes leather brogues men formal",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  },
+  {
+    "id": "glow",
+    "name": "Glow Threads",
+    "username": "glowthreads.sample",
+    "cats": [
+      "Clothes"
+    ],
+    "verified": false,
+    "rating": 4.3,
+    "reviews": 44,
+    "replyMins": 10,
+    "areas": [
+      "All areas"
+    ],
+    "howToOrder": "New pieces every weekend. Order on WhatsApp; countrywide delivery in 1-3 days.",
+    "whatsapp": null,
+    "sample": true,
+    "items": [
+      {
+        "name": "Satin slip dress",
+        "price": 2800,
+        "tags": "dress satin women party",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Bodycon dress",
+        "price": 1800,
+        "tags": "dress bodycon women party",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Crop tops",
+        "price": 800,
+        "tags": "top crop women",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      },
+      {
+        "name": "Matching sets",
+        "price": 2400,
+        "tags": "set two piece women",
+        "image": null,
+        "permalink": null,
+        "source": "manual"
+      }
+    ],
+    "lastRefreshed": null
+  }
+]

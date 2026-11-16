@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search shops | Insta-Crawl</title>
+  <meta name="description" content="Find Instagram shops by product, price, category and delivery area with Insta-Crawl.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand-row">
+      <a class="brand" href="/">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg>
+        <span>Insta-Crawl</span>
+      </a>
+    </div>
+    <h1 id="pageTitle">What are you looking for?</h1>
+
+    <section id="searchControls" class="controls">
+      <form id="searchForm" role="search" class="searchbox">
+        <label for="q" class="sr">Search for what you want to buy</label>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B5A55" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" placeholder="e.g. white sneakers under 3000">
+      </form>
+      <div id="suggest" class="suggest">
+        <span>Try:</span>
+      </div>
+      <div id="cats" class="chips scroll-x" role="group" aria-label="Category"></div>
+      <div class="row-between">
+        <button type="button" id="filtersBtn" class="link-btn" aria-expanded="false" aria-controls="filters">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          <span id="filtersLabel">Filters</span>
+        </button>
+        <div class="seg" role="group" aria-label="Sort">
+          <button type="button" data-sort="match" aria-pressed="true">Best match</button>
+          <button type="button" data-sort="reply" aria-pressed="false">Fastest reply</button>
+        </div>
+      </div>
+      <div id="filters" class="panel" hidden>
+        <div class="field">
+          <span class="eyebrow">Price</span>
+          <div id="prices" class="chips wrap" role="group" aria-label="Price"></div>
+        </div>
+        <div class="field">
+          <span class="eyebrow">Delivers to</span>
+          <div id="areas" class="chips wrap" role="group" aria-label="Delivery area"></div>
+        </div>
+        <div class="row-between">
+          <button type="button" id="verifiedBtn" class="chip" aria-pressed="false">Verified sellers only</button>
+          <button type="button" id="resetBtn" class="text-btn">Reset</button>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="main" class="main">
+    <p id="resultLabel" class="muted small" aria-live="polite"></p>
+    <div id="list" class="list"></div>
+    <div id="empty" class="empty" hidden></div>
+
+    <form id="sellForm" class="sell" hidden novalidate>
+      <p>Get found by people searching for exactly what you sell, without waiting for the algorithm. Listing is free.</p>
+      <div class="field">
+        <label for="sUser">Instagram username</label>
+        <input id="sUser" name="username" placeholder="@yourshop" autocomplete="off" required>
+      </div>
+      <div class="field">
+        <label for="sName">Shop name</label>
+        <input id="sName" name="name" placeholder="As shoppers know you">
+      </div>
+      <div class="field">
+        <span class="label">What do you sell?</span>
+        <div id="sCats" class="chips wrap" role="group" aria-label="What you sell"></div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="sMin">Lowest price (KES)</label>
+          <input id="sMin" name="minPrice" inputmode="numeric" placeholder="500">
+        </div>
+        <div class="field">
+          <label for="sMax">Highest price (KES)</label>
+          <input id="sMax" name="maxPrice" inputmode="numeric" placeholder="4000">
+        </div>
+      </div>
+      <div class="field">
+        <span class="label">Where do you deliver?</span>
+        <div id="sAreas" class="chips wrap" role="group" aria-label="Delivery areas"></div>
+      </div>
+      <div class="field">
+        <label for="sWa">WhatsApp for orders (optional)</label>
+        <input id="sWa" name="whatsapp" type="tel" placeholder="07XX XXX XXX">
+      </div>
+      <div class="field">
+        <label for="sHow">How to order (optional)</label>
+        <input id="sHow" name="howToOrder" placeholder="e.g. DM your size, pay on delivery">
+      </div>
+      <p id="sErr" class="error" role="alert" hidden></p>
+      <button type="submit" class="btn primary">List my shop for free</button>
+      <p class="muted small">We pull your latest posts from your public Instagram business profile so your listing stays fresh. A verified badge comes after a quick ID and buyer-review check.</p>
+    </form>
+    <div id="sellDone" class="sell" hidden></div>
+  </main>
+
+  <section id="detail" class="detail" hidden aria-labelledby="dName"></section>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <nav class="tabs" aria-label="Main">
+    <button type="button" data-tab="search" aria-current="page">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <span>Search</span>
+    </button>
+    <button type="button" data-tab="saved">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+      <span id="savedTab">Saved</span>
+    </button>
+    <button type="button" data-tab="sell">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/></svg>
+      <span>For sellers</span>
+    </button>
+  </nav>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
