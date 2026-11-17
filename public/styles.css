@@ -94,6 +94,9 @@ h1 { margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-
 .btn.dark { border: 0; background: var(--gradient); color: #fff; }
 .btn.outline { border: 1.5px solid var(--ink); background: #fff; color: var(--ink); }
 .btn.primary { border: 0; background: var(--gradient); color: #fff; min-height: 50px; font-size: 15px; }
+.btn.primary:disabled { cursor: wait; opacity: 0.8; }
+.btn.primary.is-loading::before { content: ""; width: 16px; height: 16px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .empty { background: #fff; border: 1px dashed #C9C5BB; border-radius: var(--radius); padding: 24px 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
 .empty strong { font-family: 'Space Grotesk', sans-serif; font-size: 18px; }
@@ -124,3 +127,7 @@ h1 { margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-
 .tabs button[aria-current="page"] { color: var(--accent); font-weight: 600; }
 
 :focus-visible { outline: 3px solid rgba(193, 53, 132, 0.45); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.primary.is-loading::before { animation-duration: 1.5s; }
+}

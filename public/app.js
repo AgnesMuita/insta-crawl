@@ -302,29 +302,63 @@
   $('sellForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const f = e.target;
+    const submitButton = $('sellSubmit');
+    const err = $('sErr');
+    if (submitButton.disabled) return;
     const body = {
       username: f.username.value, name: f.name.value,
       minPrice: f.minPrice.value.replace(/\D/g, ''), maxPrice: f.maxPrice.value.replace(/\D/g, ''),
       whatsapp: f.whatsapp.value, howToOrder: f.howToOrder.value,
       cats: [...state.sCats], areas: [...state.sAreas],
     };
-    const res = await fetch('/api/shops', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-    const data = await res.json();
-    const err = $('sErr');
-    if (!res.ok) { err.textContent = data.errors.join(' '); err.hidden = false; return; }
+    submitButton.disabled = true;
+    submitButton.setAttribute('aria-busy', 'true');
+    submitButton.classList.add('is-loading');
+    submitButton.textContent = 'Submitting…';
     err.hidden = true;
-    f.reset(); state.sCats.clear(); state.sAreas.clear(); renderSellChips();
-    f.hidden = true;
-    const done = $('sellDone');
-    done.replaceChildren(
-      h('div', { class: 'card' },
-        h('strong', { style: { fontFamily: "'Space Grotesk', sans-serif", fontSize: '20px' } }, 'You’re listed'),
-        h('span', { class: 'small', style: { lineHeight: '1.5' } }, 'This is how shoppers will see you in search. Your products fill in automatically after the next Instagram refresh.')
-      ),
-      shopCard(data),
-      h('button', { type: 'button', class: 'btn outline', onclick: () => { done.hidden = true; f.hidden = false; } }, 'List another shop')
-    );
-    done.hidden = false;
+
+    try {
+      let res;
+      try {
+        res = await fetch('/api/shops', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      } catch {
+        err.textContent = 'Could not submit your listing. Check your connection and try again.';
+        err.hidden = false;
+        return;
+      }
+
+      let data;
+      try {
+        data = await res.json();
+      } catch {
+        err.textContent = 'The server returned an invalid response. Please try again.';
+        err.hidden = false;
+        return;
+      }
+      if (!res.ok) {
+        err.textContent = Array.isArray(data.errors) ? data.errors.join(' ') : 'Could not submit your listing. Please try again.';
+        err.hidden = false;
+        return;
+      }
+      err.hidden = true;
+      f.reset(); state.sCats.clear(); state.sAreas.clear(); renderSellChips();
+      f.hidden = true;
+      const done = $('sellDone');
+      done.replaceChildren(
+        h('div', { class: 'card' },
+          h('strong', { style: { fontFamily: "'Space Grotesk', sans-serif", fontSize: '20px' } }, 'You’re listed'),
+          h('span', { class: 'small', style: { lineHeight: '1.5' } }, 'This is how shoppers will see you in search. Your products fill in automatically after the next Instagram refresh.')
+        ),
+        shopCard(data),
+        h('button', { type: 'button', class: 'btn outline', onclick: () => { done.hidden = true; f.hidden = false; } }, 'List another shop')
+      );
+      done.hidden = false;
+    } finally {
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-busy');
+      submitButton.classList.remove('is-loading');
+      submitButton.textContent = 'List my shop for free';
+    }
   });
 
   // ---------- wire up ----------
